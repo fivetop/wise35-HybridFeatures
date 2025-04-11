@@ -1,0 +1,183 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<TargetFrameworks>net48;net8.0;net8.0-android;net8.0-ios</TargetFrameworks>
+		<ImplicitUsings>disable</ImplicitUsings>
+		<Nullable>enable</Nullable>
+		<LangVersion>latest</LangVersion>
+		<GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+	</PropertyGroup>
+
+	<ItemGroup Condition="'$(TargetFramework.TrimEnd(`0123456789`))'=='net'">
+		<Reference Include="Microsoft.CSharp" />
+		<Reference Include="System.Windows.Forms" />
+		<Reference Include="System.Data.DataSetExtensions" />
+	</ItemGroup>
+
+	<ItemGroup Condition="'$(TargetFramework)'!='net48'">
+		<Compile Remove="Extras\SyncFlashlightHttpHandler.cs" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<Compile Remove="Panels\BackButton.cs" />
+		<Compile Remove="Panels\BackButton.Designer.cs" />
+		<Compile Remove="Panels\CommunityPopups.cs" />
+		<Compile Remove="Panels\CommunityPopups.Designer.cs" />
+		<Compile Remove="Panels\DeviceScreen.cs" />
+		<Compile Remove="Panels\DeviceScreen.Designer.cs" />
+		<Compile Remove="Panels\JsBarcodeScanner.cs" />
+		<Compile Remove="Panels\JSBarcodeScanner.Designer.cs" />
+		<Compile Remove="Panels\MauiBarcodeScanner.cs" />
+		<Compile Remove="Panels\MauiBarcodeScanner.Designer.cs" />
+		<Compile Remove="Panels\NFC.cs" />
+		<Compile Remove="Panels\NFC.Designer.cs" />
+		<Compile Remove="Panels\Notifications.cs" />
+		<Compile Remove="Panels\Notifications.Designer.cs" />
+		<Compile Remove="Panels\Snackbar.cs" />
+		<Compile Remove="Panels\Snackbar.Designer.cs" />
+		<Compile Remove="Panels\Toast.cs" />
+		<Compile Remove="Panels\Toast.Designer.cs" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<EmbeddedResource Remove="Panels\BackButton.resx" />
+		<EmbeddedResource Remove="Panels\CommunityPopups.resx" />
+		<EmbeddedResource Remove="Panels\DeviceScreen.resx" />
+		<EmbeddedResource Remove="Panels\JSBarcodeScanner.resx" />
+		<EmbeddedResource Remove="Panels\MauiBarcodeScanner.resx" />
+		<EmbeddedResource Remove="Panels\NFC.resx" />
+		<EmbeddedResource Remove="Panels\Notifications.resx" />
+		<EmbeddedResource Remove="Panels\Snackbar.resx" />
+		<EmbeddedResource Remove="Panels\Toast.resx" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<None Remove="Data\bell.mp3" />
+		<None Remove="Data\wisej.pdf" />
+		<None Remove="Images\face-id.png" />
+		<None Remove="Images\home-icon.png" />
+		<None Remove="Images\Icons\Alerts.svg" />
+		<None Remove="Images\Icons\Edit-Light.png" />
+		<None Remove="Images\Icons\Edit.png" />
+		<None Remove="Images\Icons\Hardware.svg" />
+		<None Remove="Images\Icons\Home-Light.png" />
+		<None Remove="Images\Icons\Home.png" />
+		<None Remove="Images\Icons\Information.svg" />
+		<None Remove="Images\Icons\Input.svg" />
+		<None Remove="Images\Icons\Media.svg" />
+		<None Remove="Images\Icons\More-Light.png" />
+		<None Remove="Images\Icons\More.png" />
+		<None Remove="Images\Icons\Navigation.svg" />
+		<None Remove="Images\Icons\Permissions.svg" />
+		<None Remove="Images\Icons\Pickers.svg" />
+		<None Remove="Images\Icons\Popups.svg" />
+		<None Remove="Images\Icons\Security.svg" />
+		<None Remove="Images\Icons\Settings-Light.png" />
+		<None Remove="Images\Icons\Settings.png" />
+		<None Remove="Images\Icons\Storage.svg" />
+		<None Remove="Images\Icons\theme.svg" />
+		<None Remove="Images\Icons\UI.svg" />
+		<None Remove="Images\loader.svg" />
+		<None Remove="Images\logo-wisej-white.png" />
+		<None Remove="Images\more-icon.png" />
+		<None Remove="Images\options-icon.png" />
+		<None Remove="Images\passcode.png" />
+		<None Remove="Images\pull-to-refresh.svg" />
+		<None Remove="Images\setting-icon.png" />
+		<None Remove="Images\splash.png" />
+		<None Remove="Images\splash.svg" />
+		<None Remove="Images\touch-id.png" />
+		<None Remove="Images\unknown.png" />
+		<None Remove="Images\wisej-128x128.png" />
+		<None Remove="Images\wisej-blue.png" />
+		<None Remove="Images\wisej-red.png" />
+		<None Remove="Images\wisej.png" />
+		<None Remove="Themes\Fonts\OpenSans.ttf" />
+		<None Remove="Themes\Hybrid.mixin.theme" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<HybridAsset Include="Data\bell.mp3" />
+		<HybridAsset Include="Data\wisej.pdf" />
+		<EmbeddedResource Include="Images\face-id.png" />
+		<EmbeddedResource Include="Images\home-icon.png" />
+		<EmbeddedResource Include="Images\Icons\Alerts.svg" />
+		<EmbeddedResource Include="Images\Icons\Edit-Light.png" />
+		<EmbeddedResource Include="Images\Icons\Edit.png" />
+		<EmbeddedResource Include="Images\Icons\Hardware.svg" />
+		<EmbeddedResource Include="Images\Icons\Home-Light.png" />
+		<EmbeddedResource Include="Images\Icons\Home.png" />
+		<EmbeddedResource Include="Images\Icons\Information.svg" />
+		<EmbeddedResource Include="Images\Icons\Input.svg" />
+		<EmbeddedResource Include="Images\Icons\Media.svg" />
+		<EmbeddedResource Include="Images\Icons\More-Light.png" />
+		<EmbeddedResource Include="Images\Icons\Navigation.svg" />
+		<EmbeddedResource Include="Images\Icons\Permissions.svg" />
+		<EmbeddedResource Include="Images\Icons\Pickers.svg" />
+		<EmbeddedResource Include="Images\Icons\Popups.svg" />
+		<EmbeddedResource Include="Images\Icons\Security.svg" />
+		<EmbeddedResource Include="Images\Icons\Settings-Light.png" />
+		<EmbeddedResource Include="Images\Icons\Settings.png" />
+		<EmbeddedResource Include="Images\Icons\Storage.svg" />
+		<EmbeddedResource Include="Images\Icons\theme.svg" />
+		<EmbeddedResource Include="Images\Icons\UI.svg" />
+		<EmbeddedResource Include="Images\pull-to-refresh.svg" />
+		<EmbeddedResource Include="Images\wisej-blue.png" />
+		<EmbeddedResource Include="Images\wisej-red.png" />
+		<HybridAsset Include="Images\logo-wisej-white.png" />
+		<EmbeddedResource Include="Images\more-icon.png" />
+		<EmbeddedResource Include="Images\options-icon.png" />
+		<EmbeddedResource Include="Images\passcode.png" />
+		<EmbeddedResource Include="Images\setting-icon.png" />
+		<EmbeddedResource Include="Images\touch-id.png" />
+		<EmbeddedResource Include="Images\unknown.png" />
+		<EmbeddedResource Include="Images\wisej-128x128.png" />
+		<HybridAsset Include="Images\wisej.png" />
+		<HybridAsset Include="Themes\Fonts\OpenSans.ttf" />
+		<HybridAsset Include="Themes\Hybrid.mixin.theme" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <EmbeddedResource Include="Images\Icons\More.png" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<PackageReference Include="Wisej-3" Version="3.5.*" />
+		<PackageReference Include="Wisej-3-Camera" Version="3.5.*" />
+		<PackageReference Include="Wisej-3-Chat" Version="3.5.*" />
+		<PackageReference Include="Wisej-3-Hybrid" Version="3.5.*" />
+		<PackageReference Include="Wisej-3-Hybrid-Authentication" Version="3.5.*" />
+		<PackageReference Include="Wisej-3-Hybrid-DocumentScanner" Version="3.5.*-*" />
+		<PackageReference Include="Wisej-3-Hybrid-MLKit" Version="3.5.*" />
+		<PackageReference Include="Wisej-3-MaterialDesign" Version="3.5.*" />
+		<PackageReference Include="Wisej-3-PullToRefresh" Version="3.5.*" />
+		<PackageReference Include="Wisej-3-Signature" Version="3.5.*" />
+	</ItemGroup>
+
+	<ItemGroup Condition="'$(TargetFramework)'=='net48'">
+	  <Reference Include="System.Web" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<Compile Update="MainPage.cs" />
+		<Compile Update="Panels\Accelerometer.cs" />
+		<Compile Update="Panels\AppInfo.cs" />
+		<Compile Update="Panels\Audio.cs" />
+		<Compile Update="Controls\BarButton.cs" />
+		<Compile Update="Panels\Barometer.cs" />
+		<Compile Update="Panels\Clipboard.cs" />
+		<Compile Update="Panels\Compass.cs" />
+		<Compile Update="Panels\Contacts.cs" />
+		<Compile Update="Panels\DeviceInfo.cs" />
+		<Compile Update="Panels\Email.cs" />
+		<Compile Update="Panels\Flashlight.cs" />
+		<Compile Update="Panels\Flyout.cs" />
+		<Compile Update="Panels\Gyroscope.cs" />
+		<Compile Update="Panels\iFrame.cs" />
+		<Compile Update="Panels\Integrations.cs" />
+		<Compile Update="Panels\Launcher.cs" />
+		<Compile Update="Panels\Links.cs" />
+		<Compile Update="Controls\AppItem.cs" />
+	</ItemGroup>
+
+</Project>
